@@ -2,6 +2,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pizzas = await fetchFromDb(`Pizzas`)
   console.log(pizzas)
   insertPizzasIntoDom(pizzas)
+
+  // Search func
+  const searchInput = document.querySelector(`.header-search input`)
+  searchInput.addEventListener(`keyup`, event => {
+    const filterString = event.target.value
+
+    const filteredPizzas = pizzas.filter(pizza => {
+      return pizza.denumire.toLowerCase().indexOf(filterString.toLowerCase()) !== -1
+    })
+    cleanPizzasDom()
+    console.log(filteredPizzas)
+    filterString === `` ? insertPizzasIntoDom(pizzas) : insertPizzasIntoDom(filteredPizzas)
+  })
 })
 
 const DB = `http://localhost:3000/`
@@ -61,4 +74,17 @@ function addToCart (pizza) {
   cartItem.innerText = `${pizza.denumire} || Pret: ${pizza.pret.normal}`
   
   cart.appendChild(cartItem)
+}
+
+
+function cleanHiddenClass () {
+  const cards = document.querySelector(`.main-items item`)
+  cards.map(card => card.classList.remove(`hidden`))
+}
+
+function cleanPizzasDom () {
+  const cards = document.querySelector(`.main-items .item`)
+  for (card of cards) {
+    card.parentNode.removeChild(card)
+  }
 }
