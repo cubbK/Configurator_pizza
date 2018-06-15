@@ -4,9 +4,8 @@
       "id": 1,
       "denumire": "Capriciosa",
       "ingredient": ["salam", "cascaval", "sos", "ciuperci", "masline"],
-      "id_blat": 111,
+      "forma_blat": "rotund",
       "tip_blat": "subtire",
-      "image": "http://seven22.com.au/wp-content/uploads/2017/02/pizza-250x180.jpg",
       "marime": ["mini", "normala", "maxi"],
       "pret": {
         "mini":45,
@@ -18,10 +17,9 @@
       "id": 2,
       "denumire": "Napoletana",
       "ingredient": ["pui", "cascaval", "sos", "ciuperci"],
-      "id_blat": 113,
+      "blat": "oval",
       "tip_blat": "gros",
       "marime": "maxi",
-      "image": "http://www.avonbusinessassociation.org/wp-content/uploads/2017/05/pizza-250x180.jpg",
       "pret": {
         "mini":45,
         "normal": 80,
@@ -33,10 +31,9 @@
       "denumire": "Pizza 3",
       "gramaj": 500,
       "ingredient": ["salam", "cascaval", "sos", "ardei"],
-      "id_blat": 112,
+      "blat": "oval",
       "tip_blat": "gros",
       "marime": "",
-      "image": "https://clickpoftabuna.ro/wp-content/uploads/featured_image/1365446583.5754pizza-20cascaval-250x180.jpg",
       "pret": {
         "mini":50,
         "normal": 80,
@@ -48,28 +45,13 @@
       "denumire": "Pizza 3",
       "gramaj": 500,
       "ingredient": ["salam", "cascaval", "sos", "ardei"],
-      "id_blat": 111,
+      "blat": "oval",
       "tip_blat": "subtire",
-      "image": "https://ravellobarandgrill.com/wp-content/uploads/2017/09/Pizza-Slider-copy-red-1-250x180.jpg",
       "pret": {
         "mini":40,
         "normal": 80,
         "maxi": 120
       }
-    }
-  ],
-  "Blats":[
-    {
-      "id_blat": 111,
-      "forma_blat": "oval"
-    },
-    {
-      "id_blat": 112,
-      "forma_blat": "rotund"
-    },
-    {
-      "id_blat": 113,
-      "forma_blat": "patrat"
     }
   ]
 }
